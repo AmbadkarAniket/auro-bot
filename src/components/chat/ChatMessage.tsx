@@ -26,9 +26,9 @@ export function ChatMessage({ message, isLatest }: ChatMessageProps) {
     >
       <div
         className={cn(
-          "flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center",
+          "flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center shadow-md",
           isUser
-            ? "bg-primary text-primary-foreground shadow-glow"
+            ? "gradient-hero text-white"
             : "bg-secondary text-secondary-foreground"
         )}
       >
@@ -37,10 +37,10 @@ export function ChatMessage({ message, isLatest }: ChatMessageProps) {
 
       <div
         className={cn(
-          "max-w-[80%] rounded-2xl px-4 py-3 shadow-sm",
+          "max-w-[80%] rounded-2xl px-4 py-3",
           isUser
-            ? "bg-chat-user text-chat-user-foreground rounded-tr-md"
-            : "bg-chat-assistant text-chat-assistant-foreground rounded-tl-md border border-border/50"
+            ? "gradient-hero text-white rounded-tr-md shadow-glow"
+            : "bg-chat-assistant text-chat-assistant-foreground rounded-tl-md border border-border shadow-sm"
         )}
       >
         {isUser ? (

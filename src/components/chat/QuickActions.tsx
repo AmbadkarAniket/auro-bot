@@ -49,7 +49,7 @@ export function QuickActions({ onSelect, disabled }: QuickActionsProps) {
           size="sm"
           onClick={() => onSelect(action.question)}
           disabled={disabled}
-          className="gap-2 rounded-full border-primary/30 hover:bg-primary/10 hover:border-primary/50 hover:text-primary transition-all duration-200"
+          className="gap-2 rounded-full border-primary/40 bg-accent/50 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-200 font-medium"
         >
           <action.icon className="w-4 h-4" />
           {action.label}

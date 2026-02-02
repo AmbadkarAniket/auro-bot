@@ -3,125 +3,127 @@
 @tailwind utilities;
 
 /* SAIT College Chatbot Design System
-   Inspired by Sri Aurobindo Institute of Technology branding
-   Colors: Warm amber/orange with deep navy accents
+   Inspired by Sri Aurobindo Institute of Technology official branding
+   Colors: Amber/Orange primary with Dark Navy secondary
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
 
 @layer base {
   :root {
-    /* Light Theme - Warm, professional, educational */
-    --background: 40 20% 98%;
-    --foreground: 222 47% 11%;
+    /* Light Theme - SAIT Official Colors */
+    --background: 0 0% 100%;
+    --foreground: 220 20% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 220 20% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover-foreground: 220 20% 10%;
 
-    /* SAIT Orange - Primary brand color */
-    --primary: 24 95% 53%;
+    /* SAIT Amber Orange - Primary brand color */
+    --primary: 38 92% 50%;
     --primary-foreground: 0 0% 100%;
 
-    /* Navy Blue - Secondary color */
-    --secondary: 222 47% 20%;
+    /* Dark Navy - Secondary color */
+    --secondary: 220 25% 15%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 40 15% 95%;
-    --muted-foreground: 222 20% 45%;
+    /* Muted grays */
+    --muted: 220 15% 95%;
+    --muted-foreground: 220 10% 45%;
 
-    --accent: 24 90% 95%;
-    --accent-foreground: 24 95% 40%;
+    /* Accent - Light amber */
+    --accent: 38 85% 95%;
+    --accent-foreground: 38 92% 40%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 40 20% 90%;
-    --input: 40 20% 90%;
-    --ring: 24 95% 53%;
+    --border: 220 15% 90%;
+    --input: 220 15% 90%;
+    --ring: 38 92% 50%;
 
-    --radius: 1rem;
+    --radius: 0.75rem;
 
     /* Chat-specific colors */
-    --chat-user: 24 95% 53%;
+    --chat-user: 38 92% 50%;
     --chat-user-foreground: 0 0% 100%;
-    --chat-assistant: 40 15% 96%;
-    --chat-assistant-foreground: 222 47% 11%;
+    --chat-assistant: 220 15% 97%;
+    --chat-assistant-foreground: 220 20% 10%;
 
-    /* Gradient definitions */
-    --gradient-hero: linear-gradient(135deg, hsl(24 95% 53%) 0%, hsl(32 95% 55%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(40 20% 98%) 0%, hsl(40 15% 95%) 100%);
-    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(40 20% 98%) 100%);
+    /* Gradient definitions - SAIT amber gradient */
+    --gradient-hero: linear-gradient(135deg, hsl(38 92% 50%) 0%, hsl(45 95% 52%) 100%);
+    --gradient-dark: linear-gradient(135deg, hsl(220 25% 12%) 0%, hsl(220 25% 18%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(38 30% 98%) 100%);
 
     /* Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(222 47% 11% / 0.05);
-    --shadow-md: 0 4px 6px -1px hsl(222 47% 11% / 0.1), 0 2px 4px -2px hsl(222 47% 11% / 0.1);
-    --shadow-lg: 0 10px 15px -3px hsl(222 47% 11% / 0.1), 0 4px 6px -4px hsl(222 47% 11% / 0.1);
-    --shadow-glow: 0 0 20px hsl(24 95% 53% / 0.3);
+    --shadow-sm: 0 1px 2px 0 hsl(220 20% 10% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(220 20% 10% / 0.1), 0 2px 4px -2px hsl(220 20% 10% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(220 20% 10% / 0.1), 0 4px 6px -4px hsl(220 20% 10% / 0.1);
+    --shadow-glow: 0 0 25px hsl(38 92% 50% / 0.35);
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 24 95% 53%;
+    --sidebar-background: 220 25% 15%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 38 92% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 25% 20%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 220 25% 25%;
+    --sidebar-ring: 38 92% 50%;
   }
 
   .dark {
-    --background: 222 47% 8%;
-    --foreground: 40 20% 95%;
+    --background: 220 25% 8%;
+    --foreground: 0 0% 95%;
 
-    --card: 222 47% 11%;
-    --card-foreground: 40 20% 95%;
+    --card: 220 25% 12%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 222 47% 11%;
-    --popover-foreground: 40 20% 95%;
+    --popover: 220 25% 12%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 24 95% 55%;
-    --primary-foreground: 222 47% 11%;
+    --primary: 38 92% 55%;
+    --primary-foreground: 220 25% 10%;
 
-    --secondary: 222 30% 25%;
-    --secondary-foreground: 40 20% 95%;
+    --secondary: 220 20% 22%;
+    --secondary-foreground: 0 0% 95%;
 
-    --muted: 222 30% 18%;
-    --muted-foreground: 40 15% 65%;
+    --muted: 220 20% 18%;
+    --muted-foreground: 220 10% 60%;
 
-    --accent: 24 50% 20%;
-    --accent-foreground: 24 95% 70%;
+    --accent: 38 50% 18%;
+    --accent-foreground: 38 92% 70%;
 
     --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 222 30% 20%;
-    --input: 222 30% 20%;
-    --ring: 24 95% 55%;
+    --border: 220 20% 20%;
+    --input: 220 20% 20%;
+    --ring: 38 92% 55%;
 
-    --chat-user: 24 95% 55%;
-    --chat-user-foreground: 222 47% 11%;
-    --chat-assistant: 222 30% 15%;
-    --chat-assistant-foreground: 40 20% 95%;
+    --chat-user: 38 92% 55%;
+    --chat-user-foreground: 220 25% 10%;
+    --chat-assistant: 220 20% 15%;
+    --chat-assistant-foreground: 0 0% 95%;
 
-    --gradient-hero: linear-gradient(135deg, hsl(24 95% 50%) 0%, hsl(32 95% 50%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(222 47% 8%) 0%, hsl(222 47% 10%) 100%);
-    --gradient-card: linear-gradient(135deg, hsl(222 47% 11%) 0%, hsl(222 47% 13%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(38 92% 48%) 0%, hsl(45 95% 50%) 100%);
+    --gradient-dark: linear-gradient(135deg, hsl(220 25% 8%) 0%, hsl(220 25% 12%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(220 25% 8%) 0%, hsl(220 25% 10%) 100%);
 
-    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.2);
-    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.3), 0 2px 4px -2px hsl(0 0% 0% / 0.2);
-    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.3), 0 4px 6px -4px hsl(0 0% 0% / 0.2);
-    --shadow-glow: 0 0 25px hsl(24 95% 55% / 0.4);
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.4), 0 2px 4px -2px hsl(0 0% 0% / 0.3);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.4), 0 4px 6px -4px hsl(0 0% 0% / 0.3);
+    --shadow-glow: 0 0 30px hsl(38 92% 55% / 0.4);
 
-    --sidebar-background: 222 47% 10%;
-    --sidebar-foreground: 40 20% 95%;
-    --sidebar-primary: 24 95% 55%;
+    --sidebar-background: 220 25% 10%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 38 92% 55%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 222 30% 18%;
-    --sidebar-accent-foreground: 40 20% 95%;
-    --sidebar-border: 222 30% 20%;
-    --sidebar-ring: 24 95% 55%;
+    --sidebar-accent: 220 20% 18%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 220 20% 20%;
+    --sidebar-ring: 38 92% 55%;
   }
 }
 
@@ -145,12 +147,12 @@
     background: var(--gradient-hero);
   }
 
-  .gradient-subtle {
-    background: var(--gradient-subtle);
+  .gradient-dark {
+    background: var(--gradient-dark);
   }
 
-  .gradient-card {
-    background: var(--gradient-card);
+  .gradient-subtle {
+    background: var(--gradient-subtle);
   }
 
   .shadow-glow {
@@ -171,6 +173,10 @@
 
   .animate-typing {
     animation: typing 1.2s infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
   }
 
   @keyframes fadeIn {
@@ -206,6 +212,11 @@
   @keyframes typing {
     0%, 100% { opacity: 0.3; }
     50% { opacity: 1; }
+  }
+
+  @keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 15px hsl(38 92% 50% / 0.3); }
+    50% { box-shadow: 0 0 25px hsl(38 92% 50% / 0.5); }
   }
 
   .scrollbar-thin {
